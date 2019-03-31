@@ -10,6 +10,6 @@
         android:layout_height="match_parent"
         android:text="ARTIKEL"
         android:textSize="40sp"
-        android:gravity="center"/>
+        android:gravity="center_horizontal"/>
 
 </FrameLayout>

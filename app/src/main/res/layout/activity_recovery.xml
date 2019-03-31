@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".RecoveryActivity"
     android:orientation="vertical"
-    android:background="#FFFDD0">
+    android:background="#FFFFFF">
 
 
     <LinearLayout
