@@ -17,12 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_main" />
-        <activity android:name=".ProfilActivity" />
         <activity android:name=".RecoveryActivity" />
-        <activity android:name=".TimelineActivity"></activity>
+        <activity android:name=".TimelineActivity">
+        </activity>
     </application>
 
 </manifest>
