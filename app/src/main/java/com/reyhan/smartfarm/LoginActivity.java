@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -24,12 +25,21 @@ public class LoginActivity extends AppCompatActivity {
         username = findViewById(R.id.userEditText);
         password = findViewById(R.id.passEditText);
 
+        
         login = findViewById(R.id.signinButton);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent loginintent = new Intent(view.getContext(), TimelineActivity.class);
-                view.getContext().startActivity(loginintent);
+                if (username.getText().toString().trim().equalsIgnoreCase("")){
+                    username.setError("Username harus diisi !!!");
+                }
+                else if (password.getText().toString().trim().equalsIgnoreCase("")){
+                    password.setError("Password harus diisi !!!");
+                }
+                else {
+                    Intent loginintent = new Intent(view.getContext(), TimelineActivity.class);
+                    view.getContext().startActivity(loginintent);
+                }
             }
         });
 
@@ -50,6 +60,6 @@ public class LoginActivity extends AppCompatActivity {
                 view.getContext().startActivity(recoveryintent);
             }
         });
-    }
 
+    }
 }

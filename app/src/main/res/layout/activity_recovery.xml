@@ -15,7 +15,7 @@
         android:orientation="vertical"
         android:layout_gravity="center"
         android:layout_marginTop="250dp"
-        android:padding="3dp"
+        android:padding="2dp"
         android:background="#000000">
 
         <EditText
@@ -36,6 +36,6 @@
         android:layout_marginTop="40dp"
         android:layout_gravity="center"
         android:text="submit"
-        android:background="@drawable/button"/>
+        android:background="@drawable/buttonsf"/>
 
 </LinearLayout>
