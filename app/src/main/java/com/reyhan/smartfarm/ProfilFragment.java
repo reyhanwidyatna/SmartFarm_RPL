@@ -8,9 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ProfilFragment extends android.support.v4.app.Fragment {
 
 
