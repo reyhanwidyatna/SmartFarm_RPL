@@ -9,10 +9,10 @@
 
     <ImageView
         android:layout_width="175dp"
-        android:layout_height="173dp"
+        android:layout_height="175dp"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:background="@drawable/logobaru" />
+        android:background="@drawable/logobaru"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
             android:inputType="text"
             android:layout_width="250dp"
             android:layout_height="40dp"
-            android:hint="Username"
+            android:hint=" Username"
             android:paddingLeft="2dp"
             android:background="#f2f2f2"/>
 
@@ -37,12 +37,13 @@
             android:inputType="textPassword"
             android:layout_width="250dp"
             android:layout_height="40dp"
-            android:hint="Password"
+            android:hint=" Password"
             android:paddingLeft="2dp"
             android:background="#f2f2f2"
             android:layout_marginTop="2dp"/>
 
     </LinearLayout>
+
 
     <Button
         android:id="@+id/lupapasswordButton"

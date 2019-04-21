@@ -8,19 +8,20 @@ import android.widget.Button;
 
 public class RecoveryActivity extends AppCompatActivity {
 
-    Button lupapassword;
+    Button recov;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recovery);
 
-        lupapassword = findViewById(R.id.lupapasswordButton);
-        lupapassword.setOnClickListener(new View.OnClickListener() {
+        recov = findViewById(R.id.submitButton);
+
+        recov.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent recovIntent = new Intent(view.getContext(), LoginActivity.class);
-                view.getContext().startActivity(recovIntent);
+                Intent recoverIntent = new Intent(view.getContext(), LoginActivity.class);
+                view.getContext().startActivity(recoverIntent);
             }
         });
     }

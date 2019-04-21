@@ -19,6 +19,7 @@
         android:background="#000000">
 
         <EditText
+            android:id="@+id/usernameEditText"
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:hint="Username"
@@ -27,6 +28,7 @@
             android:background="#f2f2f2"/>
 
         <EditText
+            android:id="@+id/passwordEditText"
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginTop="2dp"
@@ -36,6 +38,7 @@
             android:background="#f2f2f2"/>
 
         <EditText
+            android:id="@+id/no_hpEditText"
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginTop="2dp"
@@ -45,6 +48,7 @@
             android:background="#f2f2f2"/>
 
         <EditText
+            android:id="@+id/emailEditText"
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginTop="2dp"
@@ -54,6 +58,13 @@
             android:background="#f2f2f2"/>
 
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/newaccButton"

@@ -10,8 +10,8 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText username;
-    EditText password;
+    EditText usernamelogin;
+    EditText passwordlogin;
 
     Button login;
     Button register;
@@ -22,19 +22,19 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        username = findViewById(R.id.userEditText);
-        password = findViewById(R.id.passEditText);
+        usernamelogin = findViewById(R.id.userEditText);
+        passwordlogin = findViewById(R.id.passEditText);
 
         
         login = findViewById(R.id.signinButton);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (username.getText().toString().trim().equalsIgnoreCase("")){
-                    username.setError("Username harus diisi !!!");
+                if (usernamelogin.getText().toString().trim().equalsIgnoreCase("")){
+                    usernamelogin.setError("Username harus diisi !!!");
                 }
-                else if (password.getText().toString().trim().equalsIgnoreCase("")){
-                    password.setError("Password harus diisi !!!");
+                else if (passwordlogin.getText().toString().trim().equalsIgnoreCase("")){
+                    passwordlogin.setError("Password harus diisi !!!");
                 }
                 else {
                     Intent loginintent = new Intent(view.getContext(), TimelineActivity.class);
