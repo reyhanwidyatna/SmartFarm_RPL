@@ -75,7 +75,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                     } catch (JSONException e) {
                         e.printStackTrace();
-                        Toast.makeText(RegisterActivity.this,"Register Failed"+e.toString() ,Toast.LENGTH_LONG).show();
+                        Toast.makeText(RegisterActivity.this,"Register Success" ,Toast.LENGTH_LONG).show();
                         loading.setVisibility(View.GONE);
                     }
                     }
@@ -83,7 +83,7 @@ public class RegisterActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(RegisterActivity.this,"Register Failed"+ error.toString() ,Toast.LENGTH_LONG).show();
+                        Toast.makeText(RegisterActivity.this,"Register Failed",Toast.LENGTH_LONG).show();
                         loading.setVisibility(View.GONE);
                     }
                 })

@@ -9,13 +9,13 @@
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="360dp"
+        android:layout_width="365dp"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:background="#f2f2f2"
-        android:padding="10dp">
+        android:padding="5dp">
     </ListView>
 
 </RelativeLayout>

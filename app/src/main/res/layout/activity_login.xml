@@ -7,92 +7,99 @@
     tools:context=".LoginActivity"
     android:background="@color/colorPrimary">
 
-    <ImageView
-        android:layout_width="175dp"
-        android:layout_height="175dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/logo"/>
-
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="2dp"
-        android:layout_marginTop="60dp"
-        android:layout_gravity="center"
-        android:background="#000000">
+        android:background="@drawable/daun">
 
-        <EditText
-            android:id="@+id/userEditText"
-            android:inputType="text"
-            android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:hint="Username"
-            android:paddingLeft="2dp"
-            android:background="#f2f2f2"/>
+        <ImageView
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/logo"/>
 
-        <EditText
-            android:id="@+id/passEditText"
-            android:inputType="textPassword"
-            android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:hint=" Password"
-            android:paddingLeft="2dp"
-            android:background="#f2f2f2"
-            android:layout_marginTop="2dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="2dp"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center"
+            android:background="#000000">
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/userEditText"
+                android:inputType="text"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:hint="Username"
+                android:paddingLeft="8dp"
+                android:background="#f2f2f2"/>
+
+            <EditText
+                android:id="@+id/passEditText"
+                android:inputType="textPassword"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:hint="Password"
+                android:paddingLeft="8dp"
+                android:background="#f2f2f2"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
 
 
-    <Button
-        android:id="@+id/lupapasswordButton"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:text="lupa password?"
-        android:layout_gravity="right"
-        android:textAllCaps="false"
-        android:textColor="#30794F"
-        android:textStyle="italic"
-        android:background="@drawable/submit"
-        android:layout_marginRight="55dp"/>
+        <Button
+            android:id="@+id/lupapasswordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="lupa password?"
+            android:layout_gravity="right"
+            android:textAllCaps="false"
+            android:textColor="#30794F"
+            android:textStyle="italic"
+            android:background="@color/colorPrimary"
+            android:layout_marginRight="55dp"/>
 
-    <Button
-        android:id="@+id/signinButton"
-        android:layout_width="180dp"
-        android:layout_height="38dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="45dp"
-        android:background="@drawable/buttonsf"
-        android:text="SIGN IN" />
+        <Button
+            android:id="@+id/signinButton"
+            android:layout_width="180dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/buttonsf"
+            android:text="SIGN IN" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="Belum punya akun ?  "
-            android:textAllCaps="true"
-            android:textColor="#000000" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/registerButton"
-            android:layout_width="90dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/submit"
-            android:text="daftar disini"
-            android:textAllCaps="false"
-            android:textColor="#30794F"
-            android:textStyle="italic" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Belum punya akun ?  "
+                android:textAllCaps="true"
+                android:textColor="#000000" />
 
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:text="daftar disini"
+                android:textAllCaps="false"
+                android:textColor="#30794F"
+                android:textStyle="italic" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
