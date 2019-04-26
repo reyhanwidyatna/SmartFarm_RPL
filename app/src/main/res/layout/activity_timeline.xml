@@ -19,7 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:background="#30794F"
+        android:layout_marginBottom="0dp"
+        android:background="@color/colorPrimaryDark"
         app:menu="@menu/navigation">
 
     </android.support.design.widget.BottomNavigationView>

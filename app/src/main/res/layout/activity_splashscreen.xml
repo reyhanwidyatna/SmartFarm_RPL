@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashscreenActivity"
-    android:background="#f2f2f2">
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:layout_width="180dp"
@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="170dp"
-        android:background="@drawable/logobaru"
+        android:background="@drawable/logo"
         android:gravity="center"
         android:textStyle="bold" />
 
@@ -22,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        style="?android:attr/progressBarStyleHorizontal"/>
+        style="?android:attr/progressBarStyleHorizontal"
+        android:visibility="gone"/>
 
 </RelativeLayout>
