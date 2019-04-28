@@ -23,7 +23,7 @@ public class RecoveryActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent recoverIntent = new Intent(view.getContext(), LoginActivity.class);
                 view.getContext().startActivity(recoverIntent);
-                System.out.println(Toast.makeText(RecoveryActivity.this, "Email berhasil dikirim!", Toast.LENGTH_LONG).show();
+                Toast.makeText(RecoveryActivity.this, "Email berhasil dikirim!", Toast.LENGTH_LONG).show();
             }
         });
     }
