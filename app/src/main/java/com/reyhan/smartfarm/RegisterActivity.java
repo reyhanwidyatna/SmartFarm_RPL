@@ -30,7 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText username,password,no_hp,email;
     ProgressBar loading;
 
-    private static String URL_REGISTER = "http://192.168.0.12/rest_api/create.php";
+    private static String URL_REGISTER = "http://192.168.0.13/rest_api/create.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

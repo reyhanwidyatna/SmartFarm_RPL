@@ -5,23 +5,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/colorPrimary">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/daun"
-        tools:context=".ProfilFragment">
+        android:layout_height="match_parent">
 
-
-        <LinearLayout
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="vertical">
+            android:background="@drawable/daun"
+            android:orientation="vertical"
+            tools:context=".ProfilFragment">
 
             <LinearLayout
+                android:id="@+id/fotoprof"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -31,128 +28,60 @@
                 <ImageButton
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:layout_marginTop="20dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/profil1"/>
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/profil1" />
+
+                <TextView
+                    android:id="@+id/editprofils"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:text="isi biodata"
+                    android:textColor="#000" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/frametext"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_height="430dp"
+                android:layout_below="@+id/fotoprof"
+                android:orientation="vertical">
 
                 <TextView
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/tv1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center"
-                    android:text="Rizha Alfajri"
-                    android:textSize="25sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:padding="1dp">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Alamat"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="No.HP"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="E-mail"
-                            android:textSize="20sp" />
-                    </LinearLayout>
+                    android:textSize="24sp"/>
 
                 <TextView
+                    android:id="@+id/tv2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:text="Riwayat pendidikan"
-                    android:textSize="25sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:padding="1dp">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="SD"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="SMP"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="SMA"
-                            android:textSize="20sp" />
-                    </LinearLayout>
-
+                    android:textSize="24sp"/>
 
                 <TextView
+                    android:id="@+id/tv3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:text="Password"
-                    android:textSize="25sp" />
+                    android:textSize="24sp"/>
 
                 <Button
-                    android:id="@+id/signinButton"
+                    android:id="@+id/signoutButton"
                     android:layout_width="180dp"
-                    android:layout_height="38dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="200dp"
                     android:background="@drawable/buttonsf"
                     android:text="SIGN OUT" />
 
-
             </LinearLayout>
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/bottomNav"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignParentBottom="true"
-            android:background="@color/colorPrimaryDark"
-            app:menu="@menu/navigation">
-
-        </android.support.design.widget.BottomNavigationView>
-
-    </RelativeLayout>
+    </ScrollView>
 
 </FrameLayout>

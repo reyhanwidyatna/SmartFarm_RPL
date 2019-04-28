@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditprofilActivity"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:id="@+id/biodata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:background="#000000"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <EditText
+            android:id="@+id/namaEditText"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="#f2f2f2"
+            android:hint="Nama"
+            android:inputType="text"
+            android:paddingLeft="8dp" />
+
+        <EditText
+            android:id="@+id/alamatEditText"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="2dp"
+            android:background="#f2f2f2"
+            android:hint="Alamat"
+            android:inputType="text"
+            android:paddingLeft="8dp" />
+
+        <EditText
+            android:id="@+id/pendidikanEditText"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="2dp"
+            android:background="#f2f2f2"
+            android:hint="Pendidikan Terakhir"
+            android:inputType="text"
+            android:paddingLeft="8dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submitProfil"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="180dp"
+        android:background="@drawable/buttonsf"
+        android:text="Submit" />
+
+</RelativeLayout>

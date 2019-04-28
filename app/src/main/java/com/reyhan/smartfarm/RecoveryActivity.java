@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class RecoveryActivity extends AppCompatActivity {
 
@@ -22,6 +23,7 @@ public class RecoveryActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent recoverIntent = new Intent(view.getContext(), LoginActivity.class);
                 view.getContext().startActivity(recoverIntent);
+                System.out.println(Toast.makeText(RecoveryActivity.this, "Email berhasil dikirim!", Toast.LENGTH_LONG).show();
             }
         });
     }
