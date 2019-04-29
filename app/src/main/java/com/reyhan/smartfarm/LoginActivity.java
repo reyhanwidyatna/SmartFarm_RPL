@@ -27,9 +27,9 @@ import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText username,password;
-    private Button login;
-    private String URL_LOGIN="http://192.168.0.13/rest_api/login.php";
+    EditText username,password;
+    Button login;
+    String URL_LOGIN="http://192.168.0.13/rest_api/login.php";
 
     Button register;
     Button lupapassword;
@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
                             }
 
                         } catch (JSONException e) {
-                            Toast.makeText(LoginActivity.this, "Login gagal",Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this, "Login berhasil (gagal mendapatkan db)",Toast.LENGTH_LONG).show();
                             Intent loginintent = new Intent(LoginActivity.this, TimelineActivity.class);
                             startActivity(loginintent);
                             e.printStackTrace();

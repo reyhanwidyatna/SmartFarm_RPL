@@ -47,9 +47,17 @@ public class RegisterActivity extends AppCompatActivity {
         buatakun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                registerUsers();
-                Intent intent = new Intent(view.getContext(), LoginActivity.class);
-                view.getContext().startActivity(intent);
+                if (username == null || password == null || no_hp == null || email == null ){
+                    username.setError("Username harus diisi");
+                    password.setError("Password harus diisi");
+                    no_hp.setError("No.Hp harus diisi");
+                    email.setError("Email harus diisi");
+                }
+                else {
+                    registerUsers();
+                    Intent intent = new Intent(view.getContext(), LoginActivity.class);
+                    view.getContext().startActivity(intent);
+                }
             }
         });
     }
@@ -69,9 +77,9 @@ public class RegisterActivity extends AppCompatActivity {
                     try {
                         JSONObject jsonObject = new JSONObject(response);
                         String succes = jsonObject.getString("Success");
-                        if (succes.equals("1")){
-                            Toast.makeText(RegisterActivity.this,"Register Success",Toast.LENGTH_LONG).show();
-                        }
+                            if (succes.equals("1")){
+                                Toast.makeText(RegisterActivity.this,"Register Success",Toast.LENGTH_LONG).show();
+                            }
 
                     } catch (JSONException e) {
                         e.printStackTrace();
