@@ -11,9 +11,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class ProfilFragment extends android.support.v4.app.Fragment {
 
-    TextView text1,text2,text3;
+    private FirebaseAuth firebaseAuth;
 
     public ProfilFragment() {
     }
@@ -22,6 +24,8 @@ public class ProfilFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profil, container, false);
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
         TextView edit = view.findViewById(R.id.editprofils);
         edit.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +40,7 @@ public class ProfilFragment extends android.support.v4.app.Fragment {
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                firebaseAuth.signOut();
                 Toast.makeText(getActivity(), "Sign Out Berhasil", Toast.LENGTH_LONG).show();
                 Intent intentlogout = new Intent(getActivity(), LoginActivity.class);
                 startActivity(intentlogout);

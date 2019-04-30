@@ -1,6 +1,5 @@
 package com.reyhan.smartfarm;
 
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -10,20 +9,26 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class TimelineActivity extends AppCompatActivity {
 
     private TextView nama;
+
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeline);
 
-        nama = findViewById(R.id.nama);
+        /*firebaseAuth = FirebaseAuth.getInstance();
 
-        Intent intent = getIntent();
-        String extraNama = intent.getStringExtra("nama");
-        nama.setText(extraNama);
+        FirebaseUser name = firebaseAuth.getCurrentUser();
+
+        nama = findViewById(R.id.nama);
+        nama.setText("HELLO, "+ name);*/
 
         BottomNavigationView navigationView = findViewById(R.id.bottomNav);
 

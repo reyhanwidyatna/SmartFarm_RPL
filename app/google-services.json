@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "603681260900",
+    "firebase_url": "https://smartfarm-6b56b.firebaseio.com",
+    "project_id": "smartfarm-6b56b",
+    "storage_bucket": "smartfarm-6b56b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603681260900:android:f7a08a4293ed1493",
+        "android_client_info": {
+          "package_name": "com.reyhan.smartfarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603681260900-5kqfmsrabcrke3nu8vj9nvu0hcf687dl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGG3zJ4vIymGm0RIi_O8o6dYDjLRhgND4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603681260900-5kqfmsrabcrke3nu8vj9nvu0hcf687dl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

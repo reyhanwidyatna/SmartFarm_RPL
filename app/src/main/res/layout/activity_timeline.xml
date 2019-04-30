@@ -28,7 +28,6 @@
             android:layout_height="55dp"
             android:layout_marginTop="75dp"
             android:gravity="center"
-            android:text="HELLO"
             android:textColor="#000"
             android:textSize="32sp" />
 
