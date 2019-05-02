@@ -1,49 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TimelineActivity">
 
-    <FrameLayout
-        android:id="@+id/frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottomNav">
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="20dp"
-            android:text="Welcome!"
-            android:textSize="32sp"
-            android:gravity="center"
-            android:textColor="#000" />
-
-        <TextView
-            android:id="@+id/nama"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="75dp"
-            android:gravity="center"
-            android:textColor="#000"
-            android:textSize="32sp" />
-
-
-
-    </FrameLayout>
-
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp"
-        android:background="@color/colorPrimaryDark"
-        app:menu="@menu/navigation">
-
-    </android.support.design.widget.BottomNavigationView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="Welcome"
+        android:textSize="24sp" />
 
 </RelativeLayout>

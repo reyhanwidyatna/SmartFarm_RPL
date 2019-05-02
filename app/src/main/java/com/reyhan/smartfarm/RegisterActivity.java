@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class RegisterActivity extends AppCompatActivity {
@@ -24,6 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
     private ProgressBar loading;
 
     private FirebaseAuth firebaseAuth;
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         firebaseAuth = FirebaseAuth.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
 
         loading = findViewById(R.id.loading);
 
@@ -43,31 +47,31 @@ public class RegisterActivity extends AppCompatActivity {
         buatakun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    Register();
+                Register();
             }
         });
     }
 
     private void Register(){
-        String user = username.getText().toString().trim();
+        final String user = username.getText().toString().trim();
         String pass = password.getText().toString().trim();
-        String nomor = no_hp.getText().toString().trim();
-        String mail = email.getText().toString().trim();
+        final String nomor = no_hp.getText().toString().trim();
+        final String mail = email.getText().toString().trim();
 
         if (TextUtils.isEmpty(user)){
-            Toast.makeText(RegisterActivity.this, "Username tidak boleh kosong", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this, "Field tidak boleh kosong", Toast.LENGTH_LONG).show();
             return;
         }
         if (TextUtils.isEmpty(pass)){
-            Toast.makeText(RegisterActivity.this, "Password tidak boleh kosong", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this, "Field tidak boleh kosong", Toast.LENGTH_LONG).show();
             return;
         }
         if (TextUtils.isEmpty(nomor)){
-            Toast.makeText(RegisterActivity.this, "No.Hp tidak boleh kosong", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this, "Field tidak boleh kosong", Toast.LENGTH_LONG).show();
             return;
         }
         if (TextUtils.isEmpty(mail)){
-            Toast.makeText(RegisterActivity.this, "Email tidak boleh kosong", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this, "Field tidak boleh kosong", Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -76,9 +80,11 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(RegisterActivity.this, "Register berhasil", Toast.LENGTH_LONG).show();
-                            Intent loginintent = new Intent(RegisterActivity.this, LoginActivity.class);
-                            startActivity(loginintent);
+                            DatabaseReference regisdb = databaseReference.push();
+                            regisdb.child("nama").setValue(user);
+                            regisdb.child("nomor").setValue(nomor);
+                            regisdb.child("email").setValue(mail);
+                            create();
                         }else {
                             Toast.makeText(RegisterActivity.this, "Register gagal", Toast.LENGTH_LONG).show();
                         }
@@ -86,4 +92,9 @@ public class RegisterActivity extends AppCompatActivity {
                 });
     }
 
+    private void create(){
+        Toast.makeText(RegisterActivity.this, "Register berhasil", Toast.LENGTH_LONG).show();
+        Intent loginintent = new Intent(RegisterActivity.this, LoginActivity.class);
+        startActivity(loginintent);
+    }
 }

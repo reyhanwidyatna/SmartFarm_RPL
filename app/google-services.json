@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "603681260900-as65vvhfitv0gclghcubrei3dajo3qgp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reyhan.smartfarm",
+            "certificate_hash": "a65e47d03bc3dc971074c2d74738b6ffcce22f94"
+          }
+        },
+        {
           "client_id": "603681260900-5kqfmsrabcrke3nu8vj9nvu0hcf687dl.apps.googleusercontent.com",
           "client_type": 3
         }

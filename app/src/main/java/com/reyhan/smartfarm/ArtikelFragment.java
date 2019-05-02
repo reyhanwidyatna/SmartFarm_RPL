@@ -48,11 +48,11 @@ public class ArtikelFragment extends android.support.v4.app.Fragment {
         };
         final String [] listnewsitems = new String[]{
                 "Jakarta - Menteri Pertanian Amran Sulaiman melakukan dialog bersama 12.000 penyuluh dan petani se-Indonesia di GOR Sudiang, Makassar. Pada pertemuan tersebut, Amran memanggil dua penyuluh asal Papua dan Aceh. Ia memberikan apresiasi dengan memberangkatkan kedua penyuluh asal Papua dan Aceh tersebut ke Thailand.\n" +
-                "\n" +
-                "\"Kami memberikan penghargaan ini kepada para penyuluh-penyuluh hebat se-Indonesia. Mereka pahlawan pangan. Karena merekalah, sektor pertanian dalam kurun 4,5 tahun di Pemerintahan Jokowi-JK sektor pertanian meningkat signifikan,\" kata Amran dalam keterangan tertulis, Rabu (10/4/2019).\n" +
-                "\n" +
-                "Amran menjelaskan, kedua penyuluh itu akan diberangkatkan ke Thailand untuk melakukan studi banding sembari mempelajari teknologi di negara itu untuk disebarluaskan di Indonesia.\n edua penyuluh yang diberangkatkan ke Thailand itu adalah Penyuluh Pertanian Dinas Pertanian dan Perkebunan Provinsi Aceh, Nurlisma dan " +
-                "Penyuluh Pertanian asal Kabupaten Timika, Matias Nikah."
+                        "\n" +
+                        "\"Kami memberikan penghargaan ini kepada para penyuluh-penyuluh hebat se-Indonesia. Mereka pahlawan pangan. Karena merekalah, sektor pertanian dalam kurun 4,5 tahun di Pemerintahan Jokowi-JK sektor pertanian meningkat signifikan,\" kata Amran dalam keterangan tertulis, Rabu (10/4/2019).\n" +
+                        "\n" +
+                        "Amran menjelaskan, kedua penyuluh itu akan diberangkatkan ke Thailand untuk melakukan studi banding sembari mempelajari teknologi di negara itu untuk disebarluaskan di Indonesia.\n edua penyuluh yang diberangkatkan ke Thailand itu adalah Penyuluh Pertanian Dinas Pertanian dan Perkebunan Provinsi Aceh, Nurlisma dan " +
+                        "Penyuluh Pertanian asal Kabupaten Timika, Matias Nikah."
 
                 ,"Sragen - Presiden Joko Widodo (Jokowi) berbicara tentang pentingnya pembaruan peralatan pertanian di era modern. Menurutnya, saat ini masih banyak petani yang menjemur padi di jalan usai panen.\n" +
                 "\n" +

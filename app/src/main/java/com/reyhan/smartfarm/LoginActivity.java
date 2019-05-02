@@ -68,12 +68,8 @@ public class LoginActivity extends AppCompatActivity {
         String mail = email.getText().toString().trim();
         String pass = password.getText().toString().trim();
 
-        if (TextUtils.isEmpty(pass)){
-            Toast.makeText(this, "Password tidak boleh kosong", Toast.LENGTH_LONG).show();
-            return;
-        }
-        if (TextUtils.isEmpty(mail)){
-            Toast.makeText(this, "Email tidak boleh kosong", Toast.LENGTH_LONG).show();
+        if (TextUtils.isEmpty(pass) || TextUtils.isEmpty(mail)) {
+            Toast.makeText(this, "Email dan Password harus diisi", Toast.LENGTH_LONG).show();
             return;
         }
 
