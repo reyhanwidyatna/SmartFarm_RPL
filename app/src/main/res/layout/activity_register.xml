@@ -8,6 +8,12 @@
     tools:context=".RegisterActivity"
     android:background="@color/colorPrimary">
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/logo"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -15,12 +21,12 @@
         android:layout_gravity="center"
         android:orientation="vertical"
         android:padding="2dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
         android:background="#000000">
 
         <EditText
             android:id="@+id/usernameEditText"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="40dp"
             android:hint="Username"
             android:paddingLeft="8dp"
@@ -29,7 +35,7 @@
 
         <EditText
             android:id="@+id/passwordEditText"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="40dp"
             android:layout_marginTop="2dp"
             android:hint="Password"
@@ -39,7 +45,7 @@
 
         <EditText
             android:id="@+id/no_hpEditText"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="40dp"
             android:layout_marginTop="2dp"
             android:paddingLeft="8dp"
@@ -49,7 +55,7 @@
 
         <EditText
             android:id="@+id/emailEditText"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="40dp"
             android:layout_marginTop="2dp"
             android:hint="Email"

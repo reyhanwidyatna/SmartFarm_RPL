@@ -79,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(LoginActivity.this, "Login berhasil", Toast.LENGTH_LONG).show();
-                            Intent loginintent = new Intent(LoginActivity.this, TimelineActivity.class);
+                            Intent loginintent = new Intent(LoginActivity.this, EditprofilActivity.class);
                             startActivity(loginintent);
                         }
                         else{

@@ -79,17 +79,6 @@
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/signoutButton"
-                android:layout_width="180dp"
-                android:layout_height="40dp"
-                android:layout_below="@id/frametext"
-                android:layout_gravity="center"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="60dp"
-                android:background="@drawable/buttonsf"
-                android:text="SIGN OUT" />
-
         </RelativeLayout>
 
     </ScrollView>

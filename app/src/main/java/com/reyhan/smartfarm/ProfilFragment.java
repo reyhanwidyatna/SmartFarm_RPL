@@ -15,7 +15,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class ProfilFragment extends android.support.v4.app.Fragment {
 
-    private FirebaseAuth firebaseAuth;
     private ImageView map, kontak, kamera;
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
@@ -57,18 +56,6 @@ public class ProfilFragment extends android.support.v4.app.Fragment {
             }
         });
 
-        firebaseAuth = FirebaseAuth.getInstance();
-
-        Button signout = (Button) view.findViewById(R.id.signoutButton);
-        signout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                firebaseAuth.signOut();
-                Toast.makeText(getActivity(), "Sign Out Berhasil", Toast.LENGTH_LONG).show();
-                Intent intentlogout = new Intent(getActivity(), LoginActivity.class);
-                startActivity(intentlogout);
-            }
-        });
 
         return view;
     }

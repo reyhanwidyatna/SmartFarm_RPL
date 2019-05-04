@@ -9,19 +9,26 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import static android.support.v4.os.LocaleListCompat.create;
 
 public class EditprofilActivity extends AppCompatActivity {
 
     private EditText nama,alamat,pendidikan;
     private Button buatprofil;
     private ImageView imageProf;
+    private FirebaseAuth firebaseAuth;
     private DatabaseReference mDatabase;
 
     static int PReqcode = 1;
@@ -32,6 +39,9 @@ public class EditprofilActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editprofil);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Profil");
 
         nama = findViewById(R.id.namaEditText);
         alamat = findViewById(R.id.alamatEditText);
@@ -55,9 +65,34 @@ public class EditprofilActivity extends AppCompatActivity {
         buatprofil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startProfil();
             }
         });
+    }
+
+    private void startProfil() {
+        String nama_user = nama.getText().toString();
+        String alamat_user = alamat.getText().toString();
+        String pendidikan_user = pendidikan.getText().toString();
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if (user != null){
+            if (!TextUtils.isEmpty(nama_user) && !TextUtils.isEmpty(alamat_user) && !TextUtils.isEmpty(pendidikan_user)){
+
+                DatabaseReference postdb = mDatabase.push();
+                postdb.child("nama").setValue(nama_user);
+                postdb.child("alamat").setValue(alamat_user);
+                postdb.child("pendidikan").setValue(pendidikan_user);
+                postdb.child("uid").setValue(user);
+
+                Intent postintent = new Intent(EditprofilActivity.this, TimelineActivity.class);
+                startActivity(postintent);
+                Toast.makeText(this, "Profil berhasil dibuat...", Toast.LENGTH_LONG).show();
+                create();
+
+            }else {
+                Toast.makeText(this, "Profil gagal dibuat...", Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
     private void openGallery() {

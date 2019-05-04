@@ -34,7 +34,7 @@
 
         <EditText
             android:id="@+id/namaEditText"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="40dp"
             android:background="#f2f2f2"
             android:hint="Nama"
@@ -43,7 +43,7 @@
 
         <EditText
             android:id="@+id/alamatEditText"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="40dp"
             android:layout_marginTop="2dp"
             android:background="#f2f2f2"
@@ -53,7 +53,7 @@
 
         <EditText
             android:id="@+id/pendidikanEditText"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="40dp"
             android:layout_marginTop="2dp"
             android:background="#f2f2f2"

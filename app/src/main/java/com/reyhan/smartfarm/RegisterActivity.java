@@ -81,7 +81,7 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             DatabaseReference regisdb = databaseReference.push();
-                            regisdb.child("nama").setValue(user);
+                            regisdb.child("username").setValue(user);
                             regisdb.child("nomor").setValue(nomor);
                             regisdb.child("email").setValue(mail);
                             create();
