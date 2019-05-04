@@ -17,27 +17,31 @@ public class SetActivity extends AppCompatActivity {
 
         BottomNavigationView navigationView = findViewById(R.id.bottomNav);
 
+        //FRAGMENTS
+
         final MainFragment mainFragment = new MainFragment();
         final ArtikelFragment artikelFragment = new ArtikelFragment();
         final ProfilFragment profilFragment = new ProfilFragment();
 
+        setFragment(mainFragment);
+
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                int id = menuItem.getItemId();
-                if (id == R.id.homeBar){
-                    setFragment(mainFragment);
-                    return true;
+                switch (menuItem.getItemId()){
+
+                    case R.id.homeBar :
+                        setFragment(mainFragment);
+                        return true;
+                    case R.id.artikelBar :
+                        setFragment(artikelFragment);
+                        return true;
+                    case R.id.profilBar :
+                        setFragment(profilFragment);
+                        return true;
+                    default:
+                        return false;
                 }
-                else if (id == R.id.artikelBar){
-                    setFragment(artikelFragment);
-                    return true;
-                }
-                else if (id == R.id.profilBar){
-                    setFragment(profilFragment);
-                    return true;
-                }
-                return false;
             }
         });
     }
@@ -47,4 +51,6 @@ public class SetActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame, fragment);
         fragmentTransaction.commit();
     }
+
+
 }

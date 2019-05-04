@@ -7,18 +7,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SetActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:padding="10dp"/>
-
-
     <FrameLayout
         android:id="@+id/frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottomNav">
-
 
     </FrameLayout>
 
