@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PostActivity">
+    tools:context=".PostActivity"
+    android:background="@drawable/daun">
 
     <ImageView
         android:id="@+id/imagePost"
@@ -48,6 +49,7 @@
         android:padding="10dp"
         android:text="POST"
         android:textSize="18sp" />
+
 
     <ProgressBar
         android:id="@+id/new_post_progress"

@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/homeBar"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="Home" />
-
-    <item
-        android:id="@+id/artikelBar"
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="Timeline" />
 
     <item
+        android:id="@+id/artikelBar"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="Notification" />
+
+    <item
         android:id="@+id/profilBar"
-        android:icon="@drawable/user"
+        android:icon="@drawable/ic_home_black_24dp"
         android:title="Profil" />
 
 </menu>

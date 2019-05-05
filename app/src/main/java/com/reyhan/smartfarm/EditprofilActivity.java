@@ -26,7 +26,7 @@ import static android.support.v4.os.LocaleListCompat.create;
 public class EditprofilActivity extends AppCompatActivity {
 
     private EditText nama,alamat,pendidikan;
-    private Button buatprofil;
+    private Button buatprofil,gotoprofil;
     private ImageView imageProf;
     private FirebaseAuth firebaseAuth;
     private DatabaseReference mDatabase;
@@ -61,6 +61,7 @@ public class EditprofilActivity extends AppCompatActivity {
             }
         });
 
+
         buatprofil = findViewById(R.id.submitProfil);
         buatprofil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,13 +86,11 @@ public class EditprofilActivity extends AppCompatActivity {
                 postdb.child("pendidikan").setValue(pendidikan_user);
                 postdb.child("uid").setValue(user);
 
-                Intent postintent = new Intent(EditprofilActivity.this, TimelineActivity.class);
+                Toast.makeText(this, "Profil berhasil dibuat...", Toast.LENGTH_SHORT).show();
+                Intent postintent = new Intent(EditprofilActivity.this, ProfilActivity.class);
                 startActivity(postintent);
-                Toast.makeText(this, "Profil berhasil dibuat...", Toast.LENGTH_LONG).show();
                 create();
 
-            }else {
-                Toast.makeText(this, "Profil gagal dibuat...", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -137,10 +136,10 @@ public class EditprofilActivity extends AppCompatActivity {
         DatabaseReference user = mDatabase.getDatabase().getReference().child("Profil");
 
         if (user != null){
+            startProfil();
+        }else {
             Intent newintent = new Intent(EditprofilActivity.this, TimelineActivity.class);
             startActivity(newintent);
-        }else {
-            startProfil();
         }
 
     }

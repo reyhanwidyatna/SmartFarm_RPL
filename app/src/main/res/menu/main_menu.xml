@@ -7,6 +7,7 @@
         android:icon="@drawable/time"
         android:title="post"
         app:showAsAction="always"/>
+
     <item
         android:id="@+id/action_news"
         android:icon="@drawable/newspaper"

@@ -4,23 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfilActivity"
-    android:background="@drawable/daun">
+    tools:context=".FeedActivity"
+    android:background="@drawable/daun"
+    android:backgroundTint="@color/colorPrimary">
 
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="20dp"></ListView>
+        android:layout_margin="10dp"></ListView>
 
     <TextView
-        android:id="@+id/sync_btn"
+        android:id="@+id/backbtn"
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="BACK"
+        android:layout_gravity="center"
+        android:text="Back"
         android:textSize="24sp"
-        android:textColor="#000" />
+        android:textColor="#000"/>
 
 </RelativeLayout>

@@ -2,10 +2,10 @@ package com.reyhan.smartfarm;
 
 public class Blog extends BlogPostId {
 
-    private String judul, desc;
+    private String judul;
+    private String desc;
 
     public Blog() {
-
     }
 
     public Blog(String judul, String desc) {
@@ -17,15 +17,7 @@ public class Blog extends BlogPostId {
         return judul;
     }
 
-    public void setJudul(String judul) {
-        this.judul = judul;
-    }
-
     public String getDesc() {
         return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
     }
 }

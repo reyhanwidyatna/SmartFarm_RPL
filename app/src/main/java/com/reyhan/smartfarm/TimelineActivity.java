@@ -68,7 +68,7 @@ public class TimelineActivity extends AppCompatActivity {
             logOut();
         }
         if (item.getItemId() == R.id.action_feed){
-            startActivity(new Intent(TimelineActivity.this, SetActivity.class));
+            startActivity(new Intent(TimelineActivity.this, FeedActivity.class));
         }
         if (item.getItemId() == R.id.action_news){
             startActivity(new Intent(TimelineActivity.this, NewsApiActivity.class));

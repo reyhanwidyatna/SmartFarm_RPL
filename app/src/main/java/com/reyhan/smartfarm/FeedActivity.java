@@ -8,48 +8,41 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.auth.User;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProfilActivity extends AppCompatActivity {
+public class FeedActivity extends AppCompatActivity {
 
     private ListView listView;
-    private FirebaseUser firebaseUser;
-    List<Profil>profilList;
+    List<Blog>blogList;
+    private TextView back;
 
     private DatabaseReference databaseReference;
-    private TextView button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profil);
+        setContentView(R.layout.activity_feed);
 
         listView = findViewById(R.id.list_view);
-        databaseReference = FirebaseDatabase.getInstance().getReference("Profil");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Post");
 
-        profilList = new ArrayList<>();
-
-        button = findViewById(R.id.sync_btn);
-        button.setOnClickListener(new View.OnClickListener() {
+        blogList = new ArrayList<>();
+        back = findViewById(R.id.backbtn);
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent tlintent = new Intent(ProfilActivity.this, TimelineActivity.class);
-                startActivity(tlintent);
+                Intent yeyintent = new Intent(FeedActivity.this, TimelineActivity.class);
+                startActivity(yeyintent);
             }
         });
-
     }
 
     @Override
@@ -59,11 +52,11 @@ public class ProfilActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                    Profil profil = snapshot.getValue(Profil.class);
-                    profilList.add(profil);
+                    Blog blog = snapshot.getValue(Blog.class);
+                    blogList.add(blog);
                 }
-                ProfilAdapter profilAdapter = new ProfilAdapter(ProfilActivity.this,profilList);
-                listView.setAdapter(profilAdapter);
+                BlogAdapter blogAdapter = new BlogAdapter(FeedActivity.this, blogList);
+                listView.setAdapter(blogAdapter);
             }
 
             @Override
