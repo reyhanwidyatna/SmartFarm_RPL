@@ -12,7 +12,7 @@
         android:id="@+id/list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"></ListView>
+        android:layout_margin="20dp"></ListView>
 
     <TextView
         android:id="@+id/backbtn"
@@ -21,8 +21,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:text="Back"
-        android:textSize="24sp"
-        android:textColor="#000"/>
+        android:textColor="#000"
+        android:textSize="24sp" />
 
 </RelativeLayout>
