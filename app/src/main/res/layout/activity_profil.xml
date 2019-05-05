@@ -4,25 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfilActivity">
+    tools:context=".ProfilActivity"
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:id="@+id/imageProfile"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:cropToPadding="true"
         android:background="@drawable/propil"/>
 
     <LinearLayout
+        android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_below="@+id/imageProfile"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -73,6 +75,18 @@
             android:textSize="18sp" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/sync_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp"
+        android:text="Update profil anda"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="italic" />
 
 
 </RelativeLayout>

@@ -1,12 +1,14 @@
 package com.reyhan.smartfarm;
 
 import android.content.Intent;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -16,7 +18,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class NewsApiActivity extends AppCompatActivity {
+public class NewsApiActivity extends AppCompatActivity{
 
     public static final String API_KEY = "40a260b68e69445ca70aadd575ca1be8";
     private RecyclerView recyclerView;
@@ -62,6 +64,7 @@ public class NewsApiActivity extends AppCompatActivity {
                     recyclerView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
 
+                    initListener();
 
                 } else {
                     Toast.makeText(NewsApiActivity.this, "No Result", Toast.LENGTH_SHORT).show();
@@ -75,6 +78,26 @@ public class NewsApiActivity extends AppCompatActivity {
         });
 
     }
+
+    private void initListener(){
+        adapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(NewsApiActivity.this, NewsDetailsActivity.class);
+
+                Article article = articles.get(position);
+                intent.putExtra("url", article.getUrl());
+                intent.putExtra("title", article.getTitle());
+                intent.putExtra("img", article.getUrlToImage());
+                intent.putExtra("date", article.getPublishedAt());
+                intent.putExtra("source", article.getSource().getName());
+                intent.putExtra("author", article.getAuthor());
+
+                startActivity(intent);
+            }
+        });
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

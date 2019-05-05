@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -25,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView register,lupapassword;
 
     private FirebaseAuth firebaseAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(LoginActivity.this, "Login berhasil", Toast.LENGTH_LONG).show();
-                            Intent loginintent = new Intent(LoginActivity.this, NewsApiActivity.class);
+                            Intent loginintent = new Intent(LoginActivity.this, EditprofilActivity.class);
                             startActivity(loginintent);
                         }
                         else{

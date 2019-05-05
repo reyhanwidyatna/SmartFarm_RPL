@@ -3,6 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/action_feed"
+        android:icon="@drawable/time"
+        android:title="post"
+        app:showAsAction="always"/>
+    <item
         android:id="@+id/action_news"
         android:icon="@drawable/newspaper"
         android:title="post"

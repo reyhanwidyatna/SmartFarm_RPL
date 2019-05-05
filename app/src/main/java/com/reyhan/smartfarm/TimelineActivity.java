@@ -67,8 +67,11 @@ public class TimelineActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.action_logout_btn) {
             logOut();
         }
-        if (item.getItemId() == R.id.action_news){
+        if (item.getItemId() == R.id.action_feed){
             startActivity(new Intent(TimelineActivity.this, SetActivity.class));
+        }
+        if (item.getItemId() == R.id.action_news){
+            startActivity(new Intent(TimelineActivity.this, NewsApiActivity.class));
         }
         if (item.getItemId() == R.id.action_profil){
 

@@ -20,6 +20,11 @@ import javax.annotation.Nullable;
 
 public class MainFragment extends android.support.v4.app.Fragment {
 
+    private RecyclerView blog_list_view;
+    private List<Blog> blog_list;
+
+    private BlogAdapter blogAdapter;
+
     public MainFragment(){
 
     }
@@ -28,6 +33,14 @@ public class MainFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_main, container, false);
+
+        blog_list = new ArrayList<>();
+        blog_list_view = view.findViewById(R.id.blog_list_view);
+
+        blogAdapter = new BlogAdapter(blog_list);
+        blog_list_view.setLayoutManager(new LinearLayoutManager(container.getContext()));
+        blog_list_view.setAdapter(blogAdapter);
+        blog_list_view.setHasFixedSize(true);
 
         return view;
     }

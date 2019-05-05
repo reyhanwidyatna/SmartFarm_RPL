@@ -1,6 +1,6 @@
 package com.reyhan.smartfarm;
 
-public class Blog {
+public class Blog extends BlogPostId {
 
     private String judul, desc;
 

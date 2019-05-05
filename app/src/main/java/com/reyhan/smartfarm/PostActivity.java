@@ -61,10 +61,11 @@ public class PostActivity extends AppCompatActivity {
                 postdb.child("desc").setValue(desc_val);
                 postdb.child("uid").setValue(currentuser);
 
+                Toast.makeText(this, "Posting berhasil...", Toast.LENGTH_LONG).show();
                 Intent postintent = new Intent(PostActivity.this, SetActivity.class);
                 startActivity(postintent);
-
                 create();
+
             }else {
                 Toast.makeText(this, "Posting gagal...", Toast.LENGTH_LONG).show();
             }

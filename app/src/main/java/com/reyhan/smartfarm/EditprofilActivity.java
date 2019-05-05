@@ -74,6 +74,7 @@ public class EditprofilActivity extends AppCompatActivity {
         String nama_user = nama.getText().toString();
         String alamat_user = alamat.getText().toString();
         String pendidikan_user = pendidikan.getText().toString();
+
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if (user != null){
             if (!TextUtils.isEmpty(nama_user) && !TextUtils.isEmpty(alamat_user) && !TextUtils.isEmpty(pendidikan_user)){
@@ -127,5 +128,20 @@ public class EditprofilActivity extends AppCompatActivity {
             pickedImgUri = data.getData();
             imageProf.setImageURI(pickedImgUri);
         }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        DatabaseReference user = mDatabase.getDatabase().getReference().child("Profil");
+
+        if (user != null){
+            Intent newintent = new Intent(EditprofilActivity.this, TimelineActivity.class);
+            startActivity(newintent);
+        }else {
+            startProfil();
+        }
+
     }
 }
